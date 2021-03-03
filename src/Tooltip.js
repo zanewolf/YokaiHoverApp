@@ -1,6 +1,5 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-// import Hover from './Hover.js'
 import useHover from "./hooks/useHover";
 import './style.css'
 
@@ -23,23 +22,6 @@ const styles = {
         padding: "20px 20px 0 20px",
         boxSizing: "border-box",
         pointerEvents:"none",
-        // "& > div": {
-        //     textTransform: "uppercase",
-        //     fontSize: "60pt",
-        // }
-        // boxSizing: 'border-box',
-        // position: 'relative',
-        // width: '160px',
-        // // bottom: '100%',
-        // left: '50%',
-        // // marginLeft: '-80px',
-        // borderRadius: '3px',
-        // backgroundColor: 'hsla(0, 0%, 20%, 0.9)',
-        // // padding: '7px',
-        // // marginBottom: '5px',
-        // color: '#fff',
-        // textAlign: 'center',
-        // fontSize: '14px',
     },
     creatureName: {
         textTransform: "uppercase"

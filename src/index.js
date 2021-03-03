@@ -88,81 +88,12 @@ function Tiles(){
 
 }
 
-// class Tiles extends React.Component {
-//     render() {
-//         // Create tile for each item in data array
-//         // Pass data to each tile and assign a key
-//         return (
-//             <div className="tiles">
-//                 {this.props.data.map((data) => {
-//                     return <Tile data={data} key={data.id} />
-//                 })}
-//             </div>
-//         );
-//     }
-// }
-
 function Tile({data}){
-    // const [open, setOpen] = React.useState(false)
-    // const [mouseOver, setMouseOver] = React.useState(false)
-
-    // const mouseEnter = (event) =>{
-    //     event.preventDefault()
-    //
-    //     if (mouseOver === false) {
-    //         // console.log(this.props.data.name);
-    //         setMouseOver(true)
-    //     }
-    // }
-    //
-    // const mouseLeave = (event) =>{
-    //     event.preventDefault()
-    //
-    //     if (mouseOver === true) {
-    //         // console.log(this.props.data.name);
-    //         setMouseOver(false)
-    //     }
-    // }
-
-    // const clickHandler = (event) => {
-    //     event.preventDefault();
-    //
-    //     if (open === false) {
-    //         setOpen(true)
-    //     } else {
-    //         setOpen(false)
-    //     }
-    //
-    // }
     let tileStyle = {
                 width: '20vw',
                 height: '30vw',
-    //     [`:hover`] : {
-    //         backgroundColor: "rgba(0,0,0,.5)"
-    //     }
             };
-    // let headerStyle = {};
-    // let zoom = {};
-    // // When tile clicked
-    // if (open==true) {
-    //     tileStyle = {
-    //         width: '62vw',
-    //         height: '62vw',
-    //         position: 'absolute',
-    //         top: '50%',
-    //         left: '50%',
-    //         margin: '0',
-    //         marginTop: '-31vw',
-    //         marginLeft: '-31vw',
-    //         boxShadow: '0 0 40px 5px rgba(0, 0, 0, 0.3)',
-    //         transform: 'none'
-    //     };
-    // } else {
-    //     tileStyle = {
-    //         width: '18vw',
-    //         height: '18vw'
-    //     };
-    // }
+
 
     const texttodisplay = {name: data.name, creator: data.by, attack: data.mainAttack, sattack: data.specialAttack}
 
@@ -170,9 +101,6 @@ function Tile({data}){
         <div className="tile">
             <Tooltip text={texttodisplay}>
                 <img
-                    // onMouseEnter={mouseEnter}
-                    // onMouseLeave={mouseLeave}
-                    // onClick={clickHandler}
                     src={data.image}
                     alt={data.name}
                     style={tileStyle}
@@ -182,93 +110,6 @@ function Tile({data}){
     );
 
 }
-
-
-// class Tile extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             open: false,
-//             mouseOver: false
-//         };
-//         // Bind properties to class instance
-//         this._clickHandler = this._clickHandler.bind(this);
-//         this._mouseEnter = this._mouseEnter.bind(this);
-//         this._mouseLeave = this._mouseLeave.bind(this);
-//     }
-//     // Event handlers to modify state values
-//     _mouseEnter(e) {
-//         e.preventDefault();
-//         if (this.state.mouseOver === false) {
-//             console.log(this.props.data.name);
-//             this.setState({
-//                 mouseOver: true
-//             })
-//         }
-//     }
-//     _mouseLeave(e) {
-//         e.preventDefault();
-//         if (this.state.mouseOver === true) {
-//             this.setState({
-//                 mouseOver: false
-//             })
-//         }
-//     }
-//     _clickHandler(e) {
-//         e.preventDefault();
-//         if (this.state.open === false) {
-//             this.setState({
-//                 open: true
-//             });
-//         } else {
-//             this.setState({
-//                 open: false
-//             });
-//         }
-//     }
-//
-//     render() {
-//         // Modify styles based on state values
-//         let tileStyle = {};
-//         let headerStyle = {};
-//         let zoom = {};
-//         // When tile clicked
-//         if (this.state.open) {
-//             tileStyle = {
-//                 width: '62vw',
-//                 height: '62vw',
-//                 position: 'absolute',
-//                 top: '50%',
-//                 left: '50%',
-//                 margin: '0',
-//                 marginTop: '-31vw',
-//                 marginLeft: '-31vw',
-//                 boxShadow: '0 0 40px 5px rgba(0, 0, 0, 0.3)',
-//                 transform: 'none'
-//             };
-//         } else {
-//             tileStyle = {
-//                 width: '18vw',
-//                 height: '18vw'
-//             };
-//         }
-//
-//         return (
-//             <div className="tile">
-//                 <Tooltip text={this.props.data.name}>
-//                     <img
-//                         onMouseEnter={this._mouseEnter}
-//                         onMouseLeave={this._mouseLeave}
-//                         onClick={this._clickHandler}
-//                         src={this.props.data.image}
-//                         alt={this.props.data.name}
-//                         style={tileStyle}
-//                     />
-//                 </Tooltip>
-//             </div>
-//         );
-//     }
-// }
 
 ReactDOM.render(
     <App data={data}/>,
