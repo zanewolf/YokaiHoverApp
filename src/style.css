@@ -18,8 +18,7 @@ body {
     margin: 15px;
     cursor: pointer;
     overflow: hidden;
-    width: 18vw;
-    height: 18vw;
+
     /*img {*/
     /*    width: 100%;*/
     /*    transition: transform 500ms ease;*/
@@ -28,3 +27,36 @@ body {
     /*    }*/
     /*}*/
 }
+
+/*.hoverTooltip {*/
+/*    color: "white";*/
+/*    height: "100%";*/
+/*    left: "0";*/
+/*    position: "absolute";*/
+/*    top: "0";*/
+/*    width: "100%";*/
+/*    z-index: 2;*/
+/*    transition: "background-color 350ms ease";*/
+/*    background-color: "rgba(0,0,0,.5)";*/
+/*    padding: "20px 20px 0 20px";*/
+/*    box-sizing: "border-box";*/
+/*    pointer-events: "none";*/
+
+/*!*h3 {*!*/
+/*!*    textTransform: "uppercase";*!*/
+/*!*    fontSize: "60pt";*!*/
+/*!*}*!*/
+
+/*}*/
+
+/*.hoverTooltip h3{*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*let tileStyle = {*/
+/*width: '18vw',*/
+/*height: '18vw',*/
+/*[`:hover`] : {*/
+/*               backgroundColor: "rgba(0,0,0,.5)"*/
+/*           }*/
+/*};*/
